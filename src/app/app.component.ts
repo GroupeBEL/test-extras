@@ -27,16 +27,7 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      this.navigate();
     });
   }
-  navigate() {
-    this.path = (Math.random() > 0.5) ? true : false;
-    console.log('path', this.path);
-    if (this.path) {
-      this.router.navigateByUrl('/home');
-    } else {
-      this.router.navigateByUrl('/profile', { state: { intro: this.path } });
-    }
-  }
+
 }

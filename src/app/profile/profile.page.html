@@ -1,0 +1,16 @@
+<ion-header color="primary">
+  <ion-toolbar>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngIf="hide">
+    <ion-icon color="primary" slot="start" name="airplane"></ion-icon>
+  </ion-item>
+  <ion-item *ngIf="!hide">
+    <ion-icon color="primary" slot="start" name="wifi"></ion-icon>
+  </ion-item>
+  <br>
+  <ion-button color="primary" expand="full" (click)="goHome()">go Home</ion-button>
+</ion-content>
